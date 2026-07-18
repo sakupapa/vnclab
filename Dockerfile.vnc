@@ -14,7 +14,8 @@ RUN apt-get update \
         tigervnc-tools \
         xfce4 \
         xterm \
-        tcpdump \
+        iproute2 \
+        iputils-ping \
     && curl -fsSL https://dl.google.com/linux/linux_signing_key.pub \
         | gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg \
     && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] \
