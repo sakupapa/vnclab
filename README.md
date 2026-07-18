@@ -1,4 +1,4 @@
-# FRR Lab
+# VNC Lab
 
 [![Codespaces][codespaces-svg]][codespaces-url] 
 
