@@ -8,6 +8,7 @@ RUN apt-get update \
         dbus-x11 \
         tigervnc-standalone-server \
         tigervnc-common \
+        tigervnc-tools \
         xfce4 \
         xterm \
         tcpdump \

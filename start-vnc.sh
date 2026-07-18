@@ -5,7 +5,7 @@ set -eu
 
 mkdir -p "$HOME/.vnc"
 umask 077
-printf '%s\n' "$VNC_PASSWORD" | vncpasswd -f > "$HOME/.vnc/passwd"
+printf '%s\n' "$VNC_PASSWORD" | tigervncpasswd -f > "$HOME/.vnc/passwd"
 
 cat > "$HOME/.vnc/xstartup" <<'EOF'
 #!/bin/sh
