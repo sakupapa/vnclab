@@ -11,6 +11,13 @@ cat > "$HOME/.vnc/xstartup" <<'EOF'
 #!/bin/sh
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
+
+google-chrome \
+  --no-sandbox \
+  --disable-dev-shm-usage \
+  --no-first-run \
+  --disable-gpu &
+
 exec startxfce4
 EOF
 chmod 700 "$HOME/.vnc/xstartup"
