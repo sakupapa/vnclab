@@ -1,0 +1,23 @@
+name: vnc-lab
+
+topology:
+  nodes:
+    vnc1:
+      kind: linux
+      image: vnc-desktop:bookworm
+      image-pull-policy: Never
+      ports:
+        - 5900:5900/tcp
+      env:
+        VNC_PASSWORD: "cisco123"
+        VNC_GEOMETRY: "1440x900"
+        VNC_DEPTH: "24"
+
+    client1:
+      kind: linux
+      image: debian:bookworm-slim
+      exec:
+        - ip link set eth1 up
+
+  links:
+    - endpoints: ["vnc1:eth1", "client1:eth1"]

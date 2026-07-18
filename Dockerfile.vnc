@@ -1,0 +1,22 @@
+FROM debian:bookworm-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV HOME=/root
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        dbus-x11 \
+        tigervnc-standalone-server \
+        tigervnc-common \
+        xfce4 \
+        xterm \
+        tcpdump \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY start-vnc.sh /usr/local/bin/start-vnc.sh
+RUN chmod 755 /usr/local/bin/start-vnc.sh
+
+EXPOSE 5900/tcp
+
+ENTRYPOINT ["/usr/local/bin/start-vnc.sh"]
