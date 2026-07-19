@@ -18,10 +18,10 @@ topology:
 
     nginx:
       kind: linux
-      image: nginx
+      image: nginx:1.0
       exec:
         - ip link set eth1 up
         - ip addr add 10.100.0.2/24 dev eth1
 
   links:
-    - endpoints: ["vnc1:eth1", "client1:eth1"]
+    - endpoints: ["vnc1:eth1", "nginx:eth1"]
