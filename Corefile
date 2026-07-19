@@ -1,0 +1,13 @@
+.:53 {
+    forward . 8.8.8.8
+    log
+    errors
+}
+example.com:53 {
+    hosts {
+        127.0.0.1 localhost
+        1.0.0.1 www.example.com
+        fallthrough
+    }
+    log
+}

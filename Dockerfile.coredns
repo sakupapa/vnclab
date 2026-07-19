@@ -1,0 +1,15 @@
+# CoreDNS itself is copied from the official image; Alpine supplies iproute2,
+# which provides the `ip link` command.
+ARG COREDNS_IMAGE=coredns/coredns:latest
+FROM ${COREDNS_IMAGE} AS coredns
+
+FROM alpine:3.21
+
+RUN apk add --no-cache iproute2
+
+COPY --from=coredns /coredns /coredns
+
+EXPOSE 53 53/udp
+
+ENTRYPOINT ["/coredns"]
+CMD ["-conf", "/etc/coredns/Corefile"]
