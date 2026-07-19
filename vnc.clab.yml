@@ -12,12 +12,16 @@ topology:
         VNC_PASSWORD: "cisco123"
         VNC_GEOMETRY: "1440x900"
         VNC_DEPTH: "24"
-
-    client1:
-      kind: linux
-      image: debian:bookworm-slim
       exec:
         - ip link set eth1 up
+        - ip addr add 10.100.0.1/24 dev eth1
+
+    nginx:
+      kind: linux
+      image: nginx
+      exec:
+        - ip link set eth1 up
+        - ip addr add 10.100.0.2/24 dev eth1
 
   links:
     - endpoints: ["vnc1:eth1", "client1:eth1"]

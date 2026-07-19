@@ -7,6 +7,7 @@
 
 
 docker build -t vnc-desktop:bookworm -f Dockerfile.vnc .
+docker build -t nginx:1.0 -f Dockerfile.nginx .
 
 gh codespace list
 gh codespace ports forward 5900:5900 -c <code space name>
