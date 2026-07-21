@@ -2,10 +2,18 @@ hostname home
 
 ip dhcp pool DHPOOL
  network 192.168.1.0 255.255.255.0
- dns-server 1.0.0.1
+ dns-server 100.0.0.1
  domain-name example.com
  lease 7
 
 interface Ethernet0/1
  ip address 192.168.1.254 255.255.255.0
- no shutdown
+ ip nat inside
+!
+interface Ethernet0/2
+ ip address dhcp
+ ip nat outside
+!
+ip nat inside source list 1 interface Ethernet0/2 overload
+ip access-list standard 1
+ 10 permit 192.168.1.0 0.0.0.255
