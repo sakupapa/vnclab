@@ -8,6 +8,12 @@ vrf definition vpn
   route-target import 1:100
  exit-address-family
 !
+ip dhcp pool DHPOOL
+ vrf vpn
+ network 100.1.0.0 255.255.255.0
+ default-router 100.1.0.254
+ dns-server 100.0.0.1
+!
 interface Loopback0
  ip address 2.2.2.2 255.255.255.255
 !
@@ -21,7 +27,7 @@ interface Ethernet0/2
 !
 router ospf 1
  network 2.2.2.2 0.0.0.0 area 0
- network 10.23.0.0 0.0.0.0 area 0
+ network 10.23.0.0 0.0.0.255 area 0
 !
 router bgp 65000
  bgp router-id 2.2.2.2
