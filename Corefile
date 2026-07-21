@@ -3,10 +3,10 @@
     log
     errors
 }
-example.com:53 {
+vncklab.com:53 {
     hosts {
         127.0.0.1 localhost
-        1.0.0.1 www.vnc_lab.com
+        1.0.0.1 www.vncklab.com
         fallthrough
     }
     log
