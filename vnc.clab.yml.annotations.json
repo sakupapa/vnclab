@@ -1,0 +1,76 @@
+{
+  "freeTextAnnotations": [],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "home",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 120,
+        "y": 380
+      },
+      "icon": "rgw"
+    },
+    {
+      "id": "pe1",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 280,
+        "y": 380
+      }
+    },
+    {
+      "id": "p",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 420,
+        "y": 380
+      }
+    },
+    {
+      "id": "pe2",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 560,
+        "y": 380
+      }
+    },
+    {
+      "id": "ix",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 760,
+        "y": 380
+      }
+    },
+    {
+      "id": "vnc",
+      "position": {
+        "x": -40,
+        "y": 380
+      },
+      "icon": "client"
+    },
+    {
+      "id": "nginx",
+      "position": {
+        "x": 900,
+        "y": 380
+      },
+      "icon": "server"
+    },
+    {
+      "id": "dns",
+      "position": {
+        "x": 760,
+        "y": 280
+      }
+    }
+  ],
+  "edgeAnnotations": [],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}
