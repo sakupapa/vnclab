@@ -3,7 +3,6 @@ hostname home
 ip dhcp pool DHPOOL
  network 192.168.1.0 255.255.255.0
  dns-server 100.0.0.1
- domain-name example.com
  lease 7
 
 interface Ethernet0/1

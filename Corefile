@@ -6,7 +6,7 @@
 example.com:53 {
     hosts {
         127.0.0.1 localhost
-        1.0.0.1 www.example.com
+        1.0.0.1 www.vnc_lab.com
         fallthrough
     }
     log
