@@ -16,6 +16,7 @@ google-chrome \
   --no-sandbox \
   --disable-dev-shm-usage \
   --disable-features=DnsOverHttps \
+  --dns-prefetch-disable \
   --no-first-run \
   --disable-gpu &
 
