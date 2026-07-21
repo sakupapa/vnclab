@@ -2,7 +2,7 @@ name: vnc
 
 topology:
   nodes:
-    vnc1:
+    vnc:
       kind: linux
       image: vnc-desktop:bookworm
       image-pull-policy: Never
@@ -33,30 +33,30 @@ topology:
         - ip addr add 100.0.0.1/24 dev eth1
     home:
       kind: cisco_iol
-      image: vrnetlab/cisco_iol:17-16-01a
+      image: vrnetlab/cisco_iol:17.16.01a
       startup-config: clab-vnc-home-startup.cfg.partial
     pe1:
       kind: cisco_iol
-      image: vrnetlab/cisco_iol:17-16-01a
+      image: vrnetlab/cisco_iol:17.16.01a
       startup-config: clab-vnc-pe1-startup.cfg.partial
     p:
       kind: cisco_iol
-      image: vrnetlab/cisco_iol:17-16-01a
+      image: vrnetlab/cisco_iol:17.16.01a
       startup-config: clab-vnc-p-startup.cfg.partial
     pe2:
       kind: cisco_iol
-      image: vrnetlab/cisco_iol:17-16-01a
+      image: vrnetlab/cisco_iol:17.16.01a
       startup-config: clab-vnc-pe2-startup.cfg.partial
     ix:
       kind: cisco_iol
-      image: vrnetlab/cisco_iol:17-16-01a
+      image: vrnetlab/cisco_iol:17.16.01a
       startup-config: clab-vnc-ix-startup.cfg.partial
 
   links:
-    - endpoints: ["vnc1:eth1", "home:Ethernet0/1"]
+    - endpoints: ["vnc:eth1", "home:Ethernet0/1"]
     - endpoints: ["home:Ethernet0/2", "pe1:Ethernet0/1"]
     - endpoints: ["pe1:Ethernet0/2", "p:Ethernet0/1"]
     - endpoints: ["p:Ethernet0/2", "pe2:Ethernet0/1"]
     - endpoints: ["pe2:Ethernet0/2", "ix:Ethernet0/1"]
-    - endpoints: ["ix:Ethenet0/2", "nginx:eth1"]
-    - endpoints: ["ix:Ethenet0/3", "coredns:eth1"]
+    - endpoints: ["ix:Ethernet0/2", "nginx:eth1"]
+    - endpoints: ["ix:Ethernet0/3", "coredns:eth1"]
