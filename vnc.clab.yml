@@ -26,8 +26,8 @@ topology:
       binds:
         - ./Corefile:/etc/coredns/Corefile:ro
       ports:
-        - "53:53/udp"
-        - "53:53/tcp"
+        - "5301:53/udp"
+        - "5302:53/tcp"
       exec:
         - ip link set eth1 up
         - ip addr add 100.0.0.1/24 dev eth1
@@ -59,4 +59,4 @@ topology:
     - endpoints: ["p:Ethernet0/2", "pe2:Ethernet0/1"]
     - endpoints: ["pe2:Ethernet0/2", "ix:Ethernet0/1"]
     - endpoints: ["ix:Ethernet0/2", "nginx:eth1"]
-    - endpoints: ["ix:Ethernet0/3", "coredns:eth1"]
+    - endpoints: ["ix:Ethernet0/3", "dns:eth1"]
