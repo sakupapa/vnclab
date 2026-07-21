@@ -15,6 +15,7 @@ unset DBUS_SESSION_BUS_ADDRESS
 google-chrome \
   --no-sandbox \
   --disable-dev-shm-usage \
+  --disable-features=DnsOverHttps \
   --no-first-run \
   --disable-gpu &
 
