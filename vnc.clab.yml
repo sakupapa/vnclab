@@ -29,9 +29,6 @@ topology:
       image: coredns:1.0
       binds:
         - ./Corefile:/etc/coredns/Corefile:ro
-      ports:
-        - "100.0.0.1:53:53/udp"
-        - "100.0.0.1:53:53/tcp"
       exec:
         - ip link set eth1 up
         - ip addr add 100.0.0.1/24 dev eth1
