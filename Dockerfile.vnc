@@ -16,6 +16,7 @@ RUN apt-get update \
         xterm \
         iproute2 \
         iputils-ping \
+        isc-dhcp-client \
     && curl -fsSL https://dl.google.com/linux/linux_signing_key.pub \
         | gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg \
     && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] \
