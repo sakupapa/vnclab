@@ -6,8 +6,7 @@
 [codespaces-url]: https://codespaces.new/sakupapa/vnclab?quickstart=1&devcontainer_path=.devcontainer%2Fdocker-in-docker%2Fdevcontainer.json
 
 
-docker build -t vnc-desktop:bookworm -f Dockerfile.vnc .
-docker build -t nginx:1.0 -f Dockerfile.nginx .
+<img width="831" height="151" alt="Image" src="https://github.com/user-attachments/assets/b77099d7-a263-4207-8486-7e31a90c4665" />
 
-gh codespace list
-gh codespace ports forward 5900:5900 -c <code space name>
+- gh codespace list
+- gh codespace ports forward 5900:5900 -c <code space name>
