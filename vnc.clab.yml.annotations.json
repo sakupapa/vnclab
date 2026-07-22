@@ -1,6 +1,58 @@
 {
   "freeTextAnnotations": [],
-  "freeShapeAnnotations": [],
+  "freeShapeAnnotations": [
+    {
+      "id": "freeShape_1784707139153",
+      "shapeType": "rectangle",
+      "position": {
+        "x": -57.29874635096115,
+        "y": 353.4898995331986
+      },
+      "width": 233,
+      "height": 97,
+      "fillColor": "rgba(127, 127, 127, 0.16)",
+      "fillOpacity": 0.2,
+      "borderColor": "#bbbebf",
+      "borderWidth": 1,
+      "borderStyle": "solid",
+      "rotation": 0,
+      "zIndex": -1
+    },
+    {
+      "id": "freeShape_1784707139153-1",
+      "shapeType": "rectangle",
+      "position": {
+        "x": 258.1864126241186,
+        "y": 353.1179409412204
+      },
+      "width": 358,
+      "height": 96,
+      "fillColor": "rgba(127, 127, 127, 0.16)",
+      "fillOpacity": 0.2,
+      "borderColor": "#bbbebf",
+      "borderWidth": 1,
+      "borderStyle": "solid",
+      "rotation": 0,
+      "zIndex": -1
+    },
+    {
+      "id": "freeShape_1784707139153-1-1",
+      "shapeType": "rectangle",
+      "position": {
+        "x": 730.2475528260704,
+        "y": 259.7619534108001
+      },
+      "width": 235,
+      "height": 189,
+      "fillColor": "rgba(127, 127, 127, 0.16)",
+      "fillOpacity": 0.2,
+      "borderColor": "#bbbebf",
+      "borderWidth": 1,
+      "borderStyle": "solid",
+      "rotation": 0,
+      "zIndex": -1
+    }
+  ],
   "trafficRateAnnotations": [],
   "groupStyleAnnotations": [],
   "networkNodeAnnotations": [],
@@ -67,7 +119,8 @@
       "position": {
         "x": 760,
         "y": 280
-      }
+      },
+      "icon": "server"
     }
   ],
   "edgeAnnotations": [],
